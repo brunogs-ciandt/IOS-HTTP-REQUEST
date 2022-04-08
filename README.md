@@ -1,2 +1,2 @@
 # IOS-HTTP-REQUEST
-Aplicativo IOS utilizando URL Session e Alamofire
+Aplicativo IOS utilizando URL Session
