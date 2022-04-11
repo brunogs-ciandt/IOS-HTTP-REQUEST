@@ -30,12 +30,28 @@ class ViewController: UIViewController {
         print("TRACE - main thread \(Thread.current.isMainThread) - Evento Button click finished \(Date.now)")
         lblStatus.text = "Http Enviado"
     }
+    
+    
+    @IBAction func invokeHttpAlamofire(_ sender: Any) {
+        loading.startAnimating()
+        
+        lblStatus.text = "Enviando Http Alamofire"
+        print("TRACE - main thread \(Thread.current.isMainThread) - Disparando http request Alamofire \(Date.now)")
+        httpRequestManager.loadCarsWithAlamofire()
+        print("TRACE - main thread \(Thread.current.isMainThread) - Evento Alamofire Button click finished \(Date.now)")
+        lblStatus.text = "Http Enviado"
+    }
 }
 
 extension ViewController : HttpRequestResponse {
     func httpResponse(response: [Codable]?) {
         print("TRACE - main thread \(Thread.current.isMainThread) - Http response API \(Date.now)")
         guard let response = response else {
+            DispatchQueue.main.async {
+                self.loading.stopAnimating()
+                self.lblStatus.text = "Request Finalizada - 0 Itens Carregados"
+            }
+            
             print("Null Http Response")
             return
         }

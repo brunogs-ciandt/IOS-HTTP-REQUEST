@@ -38,14 +38,6 @@
                                     <action selector="invokeHttp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0MP-w4-iID"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLl-Bj-Dai">
-                                <rect key="frame" x="16" y="314" width="382" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ELW-WS-Ygw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="q5a-BA-M5o">
                                 <rect key="frame" x="187" y="164" width="40" height="40"/>
                                 <constraints>
@@ -53,6 +45,30 @@
                                     <constraint firstAttribute="width" constant="40" id="y5U-b2-eyf"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcM-rW-Hi1">
+                                <rect key="frame" x="16" y="319" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ONn-bU-a3u"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Invoke Http Request Alamofire">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="invokeHttpAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hXa-Uw-dsX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLl-Bj-Dai">
+                                <rect key="frame" x="16" y="399" width="382" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LmP-LZ-AC8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,14 +76,17 @@
                             <constraint firstItem="L2G-lL-o8h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0va-KD-xN8"/>
                             <constraint firstItem="L2G-lL-o8h" firstAttribute="top" secondItem="q5a-BA-M5o" secondAttribute="bottom" constant="40" id="2TT-4c-8ai"/>
                             <constraint firstItem="1Ic-gG-Yuu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6Jt-d3-JuH"/>
+                            <constraint firstItem="JcM-rW-Hi1" firstAttribute="top" secondItem="L2G-lL-o8h" secondAttribute="bottom" constant="25" id="HlO-Yi-pmR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L2G-lL-o8h" secondAttribute="trailing" constant="16" id="OxL-B2-gsh"/>
                             <constraint firstItem="q5a-BA-M5o" firstAttribute="top" secondItem="1Ic-gG-Yuu" secondAttribute="bottom" constant="40" id="PKW-oq-bpy"/>
+                            <constraint firstItem="JcM-rW-Hi1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RGG-8b-Vkb"/>
                             <constraint firstItem="1Ic-gG-Yuu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="VQ2-Da-Zrr"/>
                             <constraint firstItem="q5a-BA-M5o" firstAttribute="centerX" secondItem="1Ic-gG-Yuu" secondAttribute="centerX" id="YzQ-14-3hK"/>
-                            <constraint firstItem="MLl-Bj-Dai" firstAttribute="top" secondItem="L2G-lL-o8h" secondAttribute="bottom" constant="20" id="f3s-Vc-2Mt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MLl-Bj-Dai" secondAttribute="trailing" constant="16" id="nCV-L3-501"/>
-                            <constraint firstItem="MLl-Bj-Dai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nna-1q-Shl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JcM-rW-Hi1" secondAttribute="trailing" constant="16" id="bSO-8S-gZu"/>
+                            <constraint firstItem="MLl-Bj-Dai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nNh-lS-KmB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Ic-gG-Yuu" secondAttribute="trailing" constant="16" id="pTB-L5-GXH"/>
+                            <constraint firstItem="MLl-Bj-Dai" firstAttribute="top" secondItem="JcM-rW-Hi1" secondAttribute="bottom" constant="30" id="ti1-KM-PRl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MLl-Bj-Dai" secondAttribute="trailing" constant="16" id="zCA-yr-xgk"/>
                         </constraints>
                     </view>
                     <connections>
